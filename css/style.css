@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+body, html{height: 100%;}
+a{ color : inherit; text-decoration: none;}
+ul,ol{list-style: none;}
+img{vertical-align: bottom;}
+
+/* z-index
+header_wrap : 500;
+
+*/
+
+/* header start */
+.header_wrap{
+  position : fixed;
+  width: 100%;
+  height: 73px;
+  top: 0;
+  background: #fff;
+  border-bottom : 1px solid #e9e9e9;
+  z-index: 500;
+}
+header{
+  display : flex;
+  justify-content: space-between;
+  width: 1140px;
+  margin : 0 auto;
+}
+
+@media screen and (max-width : 1140px){
+  header{
+    width : 100%;
+  }
+}
+
+#logo{
+  padding-top: 23px;
+}
+#logo h1{
+  font-size: 0;
+}
+#logo h1 a{}
+#logo h1 a img{}
+
+#gnb{
+  
+}
+#gnb > ul{
+  padding-right: 24px;
+}
+
+#gnb > ul:after{
+  content : '';
+  clear : both;
+  display : block;
+}
+
+#gnb > ul + div{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 0px;
+  background: #fff;
+  transition : 0.3s;
+  z-index: -1;
+}
+
+#gnb:hover ul + div{
+  height: 420px;
+}
+
+#gnb > ul > li{
+  float : left;
+  position : relative;
+  width: 100px;
+  height: 73px;
+  line-height: 73px;
+  margin-left: 20px;
+}
+
+#gnb > ul > li:first-child{
+  margin-left: 0;
+}
+
+#gnb:hover ul.submenu{
+  opacity: 1;
+}
+
+#gnb:hover{
+  overflow : visible;
+}
+
+#gnb > ul > li:hover a{
+  /* background: #f1f1f1; */
+}
+
+#gnb > ul > li > a{
+  display: inline-block;
+  position : relative;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight : bold;
+  color : #1e1e1e;
+}
+
+#gnb > ul > li:after{
+  content : '';
+  position : absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 0;
+  height: 3px;
+  background : #666;
+  transition : 0.3s;
+}
+
+#gnb > ul > li:hover:after{
+  left: 0%;
+  width: 100%;
+}
+
+#gnb .submenu{
+  position : absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0;
+  transition : 0.3s;
+}
+#gnb .submenu li{
+  line-height: 39px;
+}
+#gnb .submenu li a{
+  font-size: 14px;
+  color : #666;
+  white-space: nowrap;
+}
+
+#gnb .submenu li a:hover{
+  color : #1e1e1e;
+}
+/* header end */
+
+/* main_banner start */
+#main_banner_wrap{
+  position : relative;
+  margin-top: 73px;
+  top: 0;
+  left: 0;
+}
+
+#main_banner{
+  background-image: url('../img/main_banner.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0px 73px;
+  width: 100%;
+  height: 834px;
+  position : absolute;
+}
+/* main_banner end */
