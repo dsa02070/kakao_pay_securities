@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="./css/style.css">
     <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" defer src="./js/common.js"></script>
 </head>
 
 <body>
@@ -18,6 +18,7 @@
             <div id="logo">
                 <h1><a href="index.html"><img src="./img/logo.png" alt="logo"></a></h1>
             </div>
+            <!-- gnb start -->
             <nav id="gnb">
                 <ul>
                     <li><a href="#">회사소개</a>
@@ -59,12 +60,19 @@
                 </ul>
                 <div></div>
             </nav>
+            <!-- gnb end -->
         </header>
     </div>
     <!-- header end -->
 
     <!-- main_banner start -->
     <div id="main_banner">
+        <div class="mtext">
+            <h2>카카오페이증권</h2>
+            <p class="subtitle">플랫폼을 통한 새로운 투자문화를 만듭니다.</p>
+            <p class="text1">KAKAOPAY</p>
+            <p class="text1 text2">SECURITIES</p>
+        </div>
         <img src="./img/main_banner.jpg" alt="메인배너">
     </div>
     <!-- main_banner end -->
@@ -80,13 +88,14 @@
         </section>
         <section id="second">
             <div class="inner">
-                <h3>카카오페이증권 <strong>인재모집<strong></h3>
+                <h3>카카오페이증권 <strong>인재모집</strong></h3>
                 <a href="#" class="btn">채용정보</a>
             </div>
-            <!-- <img src="./img/section3_bg.png" alt="section3_bg"> -->
         </section>
     </div>
     <!-- container end -->
+
+    <!-- footer start -->
     <footer>
         <div class="inner">
             <div class="f_top">
@@ -105,11 +114,12 @@
                 <address>경기도 성남시 분당구 판교역로 146번길 20 Office H 12층<br>
                     강남오피스: 서울시 강남구 테헤란로 512 신안빌딩 3층<br>
                     여의도오피스: 서울시 영등포구 의사당대로1길 34</address>
-                <div class="tel">고객센터 : 1600-8515</div>
-                <div class="copyright"></div>
+                <div class="tel"><a href="tel:+82-1600-8515">고객센터 : 1600-8515</a></div>
+                <div class="copyright">© 2020 Copyright kakaopay securities corp.</div>
             </div>
         </div>
     </footer>
+    <!-- footer end -->
 </body>
 
 </html>
