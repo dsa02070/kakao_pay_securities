@@ -9,6 +9,7 @@ address{font-style: normal;}
 
 /* z-index
 header_wrap : 500;
+.mgnb_btn span : 100;
 
 */
 
@@ -29,13 +30,12 @@ header_wrap : 500;
 }
 
 header{
+  position : relative;
   display : flex;
   justify-content: space-between;
   width: 1140px;
   margin : 0 auto;
 }
-
-
 
 #logo{
   padding-top: 23px;
@@ -88,11 +88,11 @@ header{
 }
 
 #gnb:hover ul.submenu{
-  opacity: 1;
+  display: block;
 }
 
 #gnb:hover{
-  overflow : visible;
+  /* overflow : visible; */
 }
 
 #gnb > ul > li:hover a{
@@ -133,8 +133,8 @@ header{
   padding-top: 10px;
   text-align: center;
   font-weight: bold;
-  opacity: 0;
-  transition : 0.3s;
+  display: none;
+  transition : 0.5s;
 }
 #gnb .submenu li{
   line-height: 39px;
@@ -148,6 +148,93 @@ header{
 #gnb .submenu li a:hover{
   color : #1e1e1e;
 }
+
+/* tablet, mobile menu */
+.mgnb_btn{
+  position : relative;
+  top: 20px;
+  right: 5%;
+  /* background: gray; */
+  display: none;
+  width: 30px;
+  height: 30px;
+  z-index: 200;
+  cursor : pointer;
+}
+.mgnb_btn span{
+  position : absolute;
+  display : block;
+  top: 30%;
+  right: 5%;
+  width: 32px;
+  height: 2px;
+  background: #000;
+  transition : 0.3s;
+  z-index: 100;
+  cursor : pointer
+}
+
+.mgnb_btn span:first-child{
+  top: 60%;
+}
+
+.mgnb_btn span:last-child{
+  
+}
+
+.mgnb_on1{
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.mgnb_on2{
+  transform: translateY(400%) rotate(-45deg);
+}
+
+.mgnb{
+  overflow : auto;
+  position : fixed;
+  display: none;;
+  top: 73px;
+  left: 0%;
+  right: 0%;
+  bottom: 0px;
+  text-align: left;
+  background: #fff;
+}
+
+.mgnb_on{
+  top: 73px;
+}
+
+.mgnb > ul{
+  margin-top: 10px;
+  margin-left: 60px;
+}
+.mgnb > ul > li{
+  margin-bottom: 20px;
+}
+.mgnb > ul > li > a{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color : #1e1e1e;
+}
+
+.mgnb > .submenu{}
+.mgnb > ul > li > .submenu > li > a{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color : #666;
+}
+
+.mgnb > ul > li > .submenu > li > a:hover{
+  text-decoration: underline;
+}
+
 /* header end */
 
 /* main_banner start */
@@ -262,7 +349,6 @@ header{
   font-weight: normal;
   margin-bottom: 3%;
   color : white;
-
 }
 
 #second img{
@@ -362,11 +448,173 @@ footer .f_info .copyright{
   header{
     width : 100%;
   }
+  #logo{
+    padding-left: 23px;
+  }
   footer .inner{
     width: 100%;
   }
 }
 
 @media screen and (max-width : 1024px){
-  
+  #gnb{
+    display : none;
+  }
+  .mgnb_btn{
+    display : block;
+  }
+}
+
+@media screen and (max-width : 768px){
+  .header_wrap{
+    height: 50px;
+  }
+  #logo{
+    padding-top: 13px;
+  }
+  .mgnb_btn{
+    top: 12px;
+  }
+  .mgnb{
+    top: 51px;
+  }
+  #main_banner img{
+    margin-top: 51px;
+  }
+  .mtext h2{
+    font-size: 5vw;
+  }
+  .mtext .subtitle{
+    font-size: 2vw;
+  }
+  .btn{
+    padding: 2vw 4vw;
+    font-size: 2vw;
+  }
+  #first h3{
+    font-size: 4.2vw;
+  }
+  #first p{
+    font-size: 1.8vw;
+  }
+  #second h3{
+    font-size: 4vw;
+  }
+  footer .f_logo{
+    margin-left: 2%;
+  }
+  footer .inner .f_top{
+    margin-bottom: 50px;
+  }
+  footer .inner .f_top ul{
+    margin-left: 2%;
+  }
+  footer .inner .f_top ul li{
+    display: block;
+    padding: 0;
+    margin-bottom: 3%;
+  }
+  footer .inner .f_top ul li:after{
+    display : none;
+  }
+  footer .inner .f_top ul li a{
+    font-weight: bold;
+  }
+  footer .f_info{
+    margin-left: 2%;
+  }
+  footer .f_info address:after{
+    display : none;
+  }
+  footer .f_info .tel{
+    display: block;
+  }
+  footer .f_info .copyright{
+    text-align: left;
+  }
+}
+@media screen and (max-width : 550px){
+  .mtext h2{
+    font-size: 6vw;
+  }
+  .mtext .subtitle{
+    font-size: 2.4vw;
+  }
+  .btn{
+    padding: 2vw 4vw;
+    font-size: 3vw;
+  }
+  #first{
+    padding : 5% 0 10%;
+    padding-left : 11%;
+    background-size: 25% auto;
+  }
+  #first h3{
+    font-size: 5vw;
+    margin-bottom: 2%;
+  }
+  #first p{
+    font-size: 2.2vw;
+  }
+  #second h3{
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width : 420px){
+  #main_banner .mtext{
+    width: 55%;
+    left: 45%;
+  }
+  .mtext h2{
+    font-size: 5vw;
+  }
+  .mtext .subtitle{
+    font-size: 3vw;
+  }
+  .btn{
+    padding: 2vw 4vw;
+    font-size: 3vw;
+  }
+  #first{
+    padding : 5% 0 10%;
+    padding-left : 11%;
+    background-size: 23% auto;
+  }
+  #first h3{
+    font-size: 5vw;
+    margin-bottom: 2%;
+  }
+  #first p{
+    font-size: 2.2vw;
+    margin-bottom: 2%;
+  }
+  #second h3{
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width : 330px){
+  .header_wrap{
+    height: 50px;
+  }
+  #logo{
+    transform: scale(0.8);
+    padding-top: 13px;
+    padding-left: 3px;
+  }
+}
+@media screen and (max-width : 280px){
+  .header_wrap{
+    min-width: 280px;
+  }
+  #main_banner{
+    min-width : 280px;
+  }
+  .container{
+    min-width : 280px;
+  }
+  footer{
+    min-width: 280px;
+  }
 }
