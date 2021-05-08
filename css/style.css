@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* css reset */
 *{margin: 0;padding: 0;}
 body, html{height: 100%;}
 a{ color : inherit; text-decoration: none;}
@@ -10,9 +11,23 @@ address{font-style: normal;}
 /* z-index
 header_wrap : 500;
 .mgnb_btn span : 100;
-
+.mtext : 100;
 */
 
+/* text color
+main_banner mtext : #000;
+gnb li a : #1e1e1e;
+
+section title : #1e1e1e;
+section subtitle : #666;
+.btn : #222;
+
+footer : #666;
+*/
+
+body{
+  padding-top: 74px;
+}
 /* header start */
 .header_wrap{
   position : fixed;
@@ -20,7 +35,7 @@ header_wrap : 500;
   height: 73px;
   top: 0;
   background: rgba(255, 255, 255, 0.7);
-  border-bottom : 1px solid #e9e9e9;
+  border-bottom : 1px solid #f9f9f9;
   transition : 0.2s;
   z-index: 500;
 }
@@ -59,28 +74,16 @@ header{
   display : block;
 }
 
-#gnb > ul + div{
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  height: 0px;
-  background: #fff;
-  transition : 0.3s;
-  z-index: -1;
-}
-
 #gnb:hover ul + div{
   height: 420px;
 }
 
 #gnb > ul > li{
-  float : left;
   position : relative;
+  float : left;
   width: 100px;
   height: 73px;
   line-height: 73px;
-  margin-left: 20px;
 }
 
 #gnb > ul > li:first-child{
@@ -239,14 +242,17 @@ header{
 
 /* main_banner start */
 #main_banner{
+  overflow: hidden;
   position : relative;
+  border-top : 1px solid #e9e9e9;
 }
 #main_banner .mtext{
   position : absolute;
   display : inline-block;
   width: 50%;
-  top: 36%;
+  top: 26%;
   left: 50%;
+  z-index: 100;
 }
 
 .mtext h2{
@@ -254,12 +260,21 @@ header{
   font-weight: bold;
   color : #000;
   margin-bottom: 2%;
+  animation : mtextAni 1.2s ease;
 }
+
 .mtext .subtitle{
   font-size: 1.5vw;
   color: #000;
   margin-bottom: 2%;
+  animation : mtextAni 1.2s ease 0.2s both;
 }
+
+@keyframes mtextAni{
+  0%{opacity: 0; transform: translateY(70%);}
+  100%{opacity: 1; transform: translateY(0%);}
+}
+
 .mtext .text1{
   font-size: 9.6vw;
   font-weight: bold;
@@ -268,16 +283,34 @@ header{
   opacity: 0.1;
   transform : translateX(-15%);
   transition : 0.3s;
+  animation : text1Ani 2s ease 0.5s both;
 }
 .mtext .text2{
-  transform : translateX(-25%)
+  transform : translateX(-25%);
+  animation : text2Ani 2s ease 0.8s both;
+}
+
+@keyframes text1Ani{
+  0%{opacity: 0; transform: translateX(-50%);}
+  100%{opacity: 0.1; transform: translateX(-15%);}
+}
+
+@keyframes text2Ani{
+  0%{opacity: 0; transform: translateX(-50%);}
+  100%{opacity: 0.1; transform: translateX(-25%);}
 }
 
 #main_banner img{
   width: 100%;
   height: auto;
-  margin-top: 74px;
+  animation : bannerAni 1s ease;
 }
+
+@keyframes bannerAni {
+  0%{filter:brightness(1.2); transform: scale(1.2);}
+  100%{filter:brightness(1); transform: scale(1);}
+}
+
 /* main_banner end */
 
 /* section start */
@@ -293,6 +326,7 @@ header{
   background-size: 33% auto;
   background-repeat: no-repeat;
   background-position: 90% bottom;
+  opacity: 0;
 }
 
 #first .inner{
@@ -325,6 +359,15 @@ header{
   transition : 0.3s;
 }
 
+.first_on{
+  animation : firstOn 1.5s ease both;
+}
+
+@keyframes firstOn{
+  0%{opacity: 0; transform: translateX(-7%);}
+  100%{opacity: 1; transform: translateX(0%);}
+}
+
 .btn:hover{
   background: #222;
   color : #ffdf00;
@@ -333,12 +376,15 @@ header{
 #first .img{
   
 }
-
+.second_wrap{
+  overflow : hidden;
+}
 #second{
   background-image: url('../img/section3_bg.png');
   width: 100%;
   height: 100%;
   background-size : cover;
+  opacity: 0;
 }
 #second .inner{
   text-align: center;
@@ -349,6 +395,24 @@ header{
   font-weight: normal;
   margin-bottom: 3%;
   color : white;
+}
+
+.second_bg_on{
+  animation : sbgAni 1s ease both;
+}
+
+@keyframes sbgAni {
+  0%{filter:brightness(1.4); transform: scale(1.2);opacity: 0;}
+  100%{filter:brightness(1); transform: scale(1);opacity: 1;}
+}
+
+.second_on{
+  animation : secondon 1.5s ease 0.8s both;
+}
+
+@keyframes secondon {
+  0%{opacity: 0; transform: translateY(10%);}
+  100%{opacity: 1; transform: translateY(0%);}
 }
 
 #second img{
@@ -463,9 +527,36 @@ footer .f_info .copyright{
   .mgnb_btn{
     display : block;
   }
+  #main_banner .mtext{
+    position : relative;
+    width: 100%;
+    left: 40%;
+    padding : 20% 0;
+  }
+  .mtext h2{
+    position : absolute;
+    font-size: 6vw;
+    top: 15%;
+    left: -10%;
+  }
+  .mtext .subtitle{
+    position : absolute;
+    font-size: 3vw;
+    top: 35%;
+    left: -15%;
+  }
+  .text1{
+    position : absolute;
+  }
+  .text2{
+    top: 70%;
+  }
 }
 
 @media screen and (max-width : 768px){
+  body{
+    padding-top: 50px;
+  }
   .header_wrap{
     height: 50px;
   }
@@ -477,15 +568,6 @@ footer .f_info .copyright{
   }
   .mgnb{
     top: 51px;
-  }
-  #main_banner img{
-    margin-top: 51px;
-  }
-  .mtext h2{
-    font-size: 5vw;
-  }
-  .mtext .subtitle{
-    font-size: 2vw;
   }
   .btn{
     padding: 2vw 4vw;
@@ -534,12 +616,6 @@ footer .f_info .copyright{
   }
 }
 @media screen and (max-width : 550px){
-  .mtext h2{
-    font-size: 6vw;
-  }
-  .mtext .subtitle{
-    font-size: 2.4vw;
-  }
   .btn{
     padding: 2vw 4vw;
     font-size: 3vw;
@@ -562,15 +638,8 @@ footer .f_info .copyright{
 }
 
 @media screen and (max-width : 420px){
-  #main_banner .mtext{
-    width: 55%;
-    left: 45%;
-  }
-  .mtext h2{
-    font-size: 5vw;
-  }
   .mtext .subtitle{
-    font-size: 3vw;
+    font-size: 3.3vw;
   }
   .btn{
     padding: 2vw 4vw;
@@ -602,6 +671,14 @@ footer .f_info .copyright{
     transform: scale(0.8);
     padding-top: 13px;
     padding-left: 3px;
+  }
+  .mtext h2{
+    font-size: 8vw;
+    top: 5%;
+    left: -15%;
+  }
+  .mtext .subtitle{
+    font-size: 3vw;
   }
 }
 @media screen and (max-width : 280px){
