@@ -8,7 +8,6 @@ $(function () {
 
     // section scroll event
     $(window).scroll(function () {
-        let wHeight = $(this).height();
         let scTop = $(this).scrollTop();
         let firstOffset = $('#first').offset();
         let secondOffset = $('#second').offset();
