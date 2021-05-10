@@ -7,6 +7,11 @@ a{ color : inherit; text-decoration: none;}
 ul,ol{list-style: none;}
 img{vertical-align: bottom;}
 address{font-style: normal;}
+button{
+  background : none;
+  border : none;
+  outline: none;
+}
 
 /* z-index
 header_wrap : 500;
@@ -218,178 +223,86 @@ header{
 .mgnb > ul > li > .submenu > li > a:hover{
   text-decoration: underline;
 }
-
 /* header end */
 
-/* main_banner start */
-#main_banner{
-  overflow: hidden;
-  position : relative;
+#container{
+  width: 1140px;
+  margin : 0 auto;
+  padding : 80px 0 120px;
 }
-#main_banner .mtext{
-  position : absolute;
-  display : inline-block;
-  width: 50%;
-  top: 26%;
-  left: 50%;
-  z-index: 100;
-}
-
-.mtext h2{
-  font-size: 4.2vw;
-  font-weight: bold;
-  color : #000;
-  margin-bottom: 2%;
-  animation : mtextAni 1.2s ease;
-}
-
-.mtext .subtitle{
-  font-size: 1.5vw;
-  color: #000;
-  margin-bottom: 2%;
-  animation : mtextAni 1.2s ease 0.2s both;
-}
-
-@keyframes mtextAni{
-  0%{opacity: 0; transform: translateY(70%);}
-  100%{opacity: 1; transform: translateY(0%);}
-}
-
-.mtext .text1{
-  font-size: 9.6vw;
-  font-weight: bold;
-  line-height: 0.8;
-  color: #000;
-  opacity: 0.1;
-  transform : translateX(-15%);
-  transition : 0.3s;
-  animation : text1Ani 2s ease 0.5s both;
-}
-.mtext .text2{
-  transform : translateX(-25%);
-  animation : text2Ani 2s ease 0.8s both;
-}
-
-@keyframes text1Ani{
-  0%{opacity: 0; transform: translateX(-50%);}
-  100%{opacity: 0.1; transform: translateX(-15%);}
-}
-
-@keyframes text2Ani{
-  0%{opacity: 0; transform: translateX(-50%);}
-  100%{opacity: 0.1; transform: translateX(-25%);}
-}
-
-#main_banner img{
-  width: 100%;
-  height: auto;
-  animation : bannerAni 1s ease;
-}
-
-@keyframes bannerAni {
-  0%{filter:brightness(1.2); transform: scale(1.2);}
-  100%{filter:brightness(1); transform: scale(1);}
-}
-
-/* main_banner end */
-
-/* section start */
-
-#first{
-  padding : 10% 0;
-  padding-left : 21%;
-  box-sizing: border-box;
-  background-image : url('../img/section2_img.png');
-  background-size: 33% auto;
-  background-repeat: no-repeat;
-  background-position: 90% bottom;
-  opacity: 0;
-}
-
-#first h3{
-  font-size: 3.8vw;
-  line-height: 1.4;
-  margin-bottom: 20px;
+#container h4{
+  font-size: 27px;
+  text-align: center;
   color : #1e1e1e;
+  margin-bottom: 60px;
 }
-#first p{
-  font-size: 1.4vw;
-  font-weight: bold;
-  line-height: 1.4;
-  margin-bottom: 30px;
-  color : #666;
+.tab_btn{
+  margin-bottom: 60px;
+}
+.tab_btn ul{
+  display : flex;
+  justify-content: center;
+}
+.tab_btn ul li{
+  flex : 1;
+  text-align: center;
+  border-bottom : 1px solid #eaeaea;
+}
+.tab_btn ul li a{
+  display: block;
+  padding : 22px 10px;
 }
 
-.btn{
-  display : inline-block;
-  padding: 16px 28px;
-  font-size: 16px;
-  font-weight: bold;
+.tab_on{
+  background : #ffdf00;
+}
+
+table{
+  width: 100%;
   text-align: center;
-  border-radius: 30px;
+  border-top : 2px solid #222;
+}
+table thead{}
+
+table tr{}
+table tr th{
+  padding: 10px;
+  border-bottom : 1px solid #eaeaea;
+}
+table tr td{
+  font-size: 15px;
+  padding: 10px;
+  border-bottom : 1px solid #eaeaea;
+}
+table tr .report{
+  text-align: left;
+}
+table tr td button{
   color : #222;
-  background: #ffdf00;
-  transition : 0.3s;
+  border : 1px solid #222;
+  padding : 3px 10px;
+  cursor : pointer;
+}
+table tr td button i{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  background: url('../img/td_icon.png') no-repeat center;
 }
 
-.first_on{
-  animation : firstOn 1.5s ease both;
-}
+.search{}
+.search form{}
+.search form select{}
+.search form select option{}
 
-@keyframes firstOn{
-  0%{opacity: 0; transform: translateX(-7%);}
-  100%{opacity: 1; transform: translateX(0%);}
-}
+.search form input{}
+.search form button{}
 
-.btn:hover{
-  background: #222;
-  color : #ffdf00;
-}
-
-.second_wrap{
-  overflow : hidden;
-}
-#second{
-  background-image: url('../img/section3_bg.png');
-  width: 100%;
-  height: 100%;
-  background-size : cover;
-  opacity: 0;
-}
-#second .inner{
-  text-align: center;
-  padding: 15% 4%;
-}
-#second h3{
-  font-size: 3.6vw;
-  font-weight: normal;
-  margin-bottom: 3%;
-  color : white;
-}
-
-.second_bg_on{
-  animation : sbgAni 1s ease both;
-}
-
-@keyframes sbgAni {
-  0%{filter:brightness(1.4); transform: scale(1.2);opacity: 0;}
-  100%{filter:brightness(1); transform: scale(1);opacity: 1;}
-}
-
-.second_on{
-  animation : secondon 1.5s ease 0.8s both;
-}
-
-@keyframes secondon {
-  0%{opacity: 0; transform: translateY(10%);}
-  100%{opacity: 1; transform: translateY(0%);}
-}
-
-#second img{
-  width: 100%;
-  height: auto;
-}
-/* section end */
+.page{}
+.page ul{}
+.page ul li{}
+.page ul li a{}
 
 /* footer start */
 footer{
@@ -493,30 +406,6 @@ footer .f_info .copyright{
   .mgnb_btn{
     display : block;
   }
-  #main_banner .mtext{
-    position : relative;
-    width: 100%;
-    left: 40%;
-    padding : 20% 0;
-  }
-  .mtext h2{
-    position : absolute;
-    font-size: 6vw;
-    top: 15%;
-    left: -10%;
-  }
-  .mtext .subtitle{
-    position : absolute;
-    font-size: 3vw;
-    top: 35%;
-    left: -15%;
-  }
-  .text1{
-    position : absolute;
-  }
-  .text2{
-    top: 70%;
-  }
 }
 
 @media screen and (max-width : 768px){
@@ -534,19 +423,6 @@ footer .f_info .copyright{
   }
   .mgnb{
     top: 51px;
-  }
-  .btn{
-    padding: 2vw 4vw;
-    font-size: 2vw;
-  }
-  #first h3{
-    font-size: 4.2vw;
-  }
-  #first p{
-    font-size: 1.8vw;
-  }
-  #second h3{
-    font-size: 4vw;
   }
   footer .f_logo{
     margin-left: 2%;
@@ -581,53 +457,6 @@ footer .f_info .copyright{
     text-align: left;
   }
 }
-@media screen and (max-width : 550px){
-  .btn{
-    padding: 2vw 4vw;
-    font-size: 3vw;
-  }
-  #first{
-    padding : 5% 0 10%;
-    padding-left : 11%;
-    background-size: 25% auto;
-  }
-  #first h3{
-    font-size: 5vw;
-    margin-bottom: 2%;
-  }
-  #first p{
-    font-size: 2.2vw;
-  }
-  #second h3{
-    font-size: 5vw;
-  }
-}
-
-@media screen and (max-width : 420px){
-  .mtext .subtitle{
-    font-size: 3.3vw;
-  }
-  .btn{
-    padding: 2vw 4vw;
-    font-size: 3vw;
-  }
-  #first{
-    padding : 5% 0 10%;
-    padding-left : 11%;
-    background-size: 23% auto;
-  }
-  #first h3{
-    font-size: 5vw;
-    margin-bottom: 2%;
-  }
-  #first p{
-    font-size: 2.2vw;
-    margin-bottom: 2%;
-  }
-  #second h3{
-    font-size: 5vw;
-  }
-}
 
 @media screen and (max-width : 330px){
   .header_wrap{
@@ -638,23 +467,12 @@ footer .f_info .copyright{
     padding-top: 13px;
     padding-left: 3px;
   }
-  .mtext h2{
-    font-size: 8vw;
-    top: 5%;
-    left: -15%;
-  }
-  .mtext .subtitle{
-    font-size: 3vw;
-  }
 }
 @media screen and (max-width : 280px){
   .header_wrap{
     min-width: 280px;
   }
-  #main_banner{
-    min-width : 280px;
-  }
-  .container{
+  #container{
     min-width : 280px;
   }
   footer{

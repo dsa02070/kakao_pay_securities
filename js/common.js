@@ -20,6 +20,15 @@ $(function () {
         }
 
     })
+
+    let tabFirst = $('.tab_first').attr('class');
+    let tabSecond = $('.tab_second').attr('class');
+    console.log(tabFirst)
+    tabFirst.hasClass('on')
+    $('.tab_btn ul li').on('click', 'a', function () {
+        $(this).toggleClass('tab_on')
+    })
+
 })
 
 // gnb의 전체 영역 배경
