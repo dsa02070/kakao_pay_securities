@@ -7,7 +7,7 @@ a{ color : inherit; text-decoration: none;}
 ul,ol{list-style: none;}
 img{vertical-align: bottom;}
 address{font-style: normal;}
-button{
+input,select,button{
   background : none;
   border : none;
   outline: none;
@@ -250,6 +250,7 @@ header{
 }
 .tab_btn ul li a{
   display: block;
+  white-space : nowrap;
   padding : 22px 10px;
 }
 
@@ -291,17 +292,59 @@ table tr td button i{
   background: url('../img/td_icon.png') no-repeat center;
 }
 
-.search{}
-.search form{}
-.search form select{}
+.search{
+  width: 506px;
+  margin : 40px auto;
+  text-align: center;
+}
+.search form{
+  overflow: hidden;
+}
+.search form select{
+  float : left;
+  width: 80px;
+  height: 46px;
+  background-color: #fbfbfb;
+  color : #333;
+  border : 1px solid #eaeaea;
+  border-right : none;
+}
 .search form select option{}
 
-.search form input{}
-.search form button{}
+.search form input{
+  float : left;
+  width: 380px;
+  height: 46px;
+  font-size: 15px;
+  color : #222;
+  padding-left: 10px;
+  background-color: #fbfbfb;
+  border : 1px solid #eaeaea;
+  border-right: none;
+  box-sizing: border-box;
+}
+.search form button{
+  float : left;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-color: #fbfbfb;
+  border : 1px solid #eaeaea;
+  text-indent: -9999px;
+  background-image : url('../img/search.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor : pointer;
+}
 
-.page{}
+.page{
+  text-align: center;
+}
 .page ul{}
-.page ul li{}
+.page ul li{
+  display : inline-block;
+  margin : 0px 5px;
+}
 .page ul li a{}
 
 /* footer start */
@@ -394,6 +437,9 @@ footer .f_info .copyright{
   #logo{
     padding-left: 23px;
   }
+  #container{
+    width: 100%;
+  }
   footer .inner{
     width: 100%;
   }
@@ -455,6 +501,22 @@ footer .f_info .copyright{
   }
   footer .f_info .copyright{
     text-align: left;
+  }
+}
+
+@media screen and (max-width : 530px){
+  table tr td{
+    white-space : nowrap;
+    text-overflow : ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  .search{
+    width: 276px;
+  }
+  .search form input{
+    width: 150px;
+    font-size: 12px;
   }
 }
 
