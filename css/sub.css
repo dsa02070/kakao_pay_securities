@@ -14,6 +14,7 @@ input,select,button{
 }
 
 /* z-index
+.header_gnb_bg : 120;
 header_wrap : 500;
 .mgnb_btn span : 100;
 .mtext : 100;
@@ -34,6 +35,17 @@ body{
   padding-top: 74px;
 }
 /* header start */
+.header_gnb_bg{
+  position : fixed;
+  top: 0;
+  width: 100%;
+  height: 73px;
+  background: #fff;
+  border-bottom : 1px solid #e9e9e9;
+  transition : 0.2s;
+  z-index: 120;
+}
+
 .header_wrap{
   position : fixed;
   width: 100%;
@@ -90,10 +102,6 @@ header{
   margin-left: 0;
 }
 
-#gnb:hover ul.submenu{
-  display: block;
-}
-
 #gnb > ul > li > a{
   display: inline-block;
   position : relative;
@@ -108,7 +116,7 @@ header{
 #gnb > ul > li:after{
   content : '';
   position : absolute;
-  left: 50%;
+  left: 0%;
   bottom: -1px;
   width: 0;
   height: 3px;
@@ -122,15 +130,17 @@ header{
 }
 
 #gnb .submenu{
+  display : none;
+  opacity: 0;
   position : absolute;
   width: 100%;
-  height: 100%;
   padding-top: 10px;
-  text-align: center;
+  padding-left: 10px;
+  text-align: left;
   font-weight: bold;
-  display: none;
-  transition : 0.5s;
+  transition : 0.2s;
 }
+
 #gnb .submenu li{
   line-height: 39px;
 }
@@ -147,9 +157,9 @@ header{
 /* tablet, mobile menu */
 .mgnb_btn{
   position : relative;
+  display: none;
   top: 20px;
   right: 5%;
-  display: none;
   width: 30px;
   height: 30px;
   z-index: 200;
@@ -250,8 +260,10 @@ header{
 }
 .tab_btn ul li a{
   display: block;
+  font-weight: bold;
   white-space : nowrap;
   padding : 22px 10px;
+  color : #1e1e1e;
 }
 
 .tab_on{
@@ -263,22 +275,36 @@ table{
   text-align: center;
   border-top : 2px solid #222;
 }
-table thead{}
 
-table tr{}
 table tr th{
   padding: 10px;
   border-bottom : 1px solid #eaeaea;
+  white-space: nowrap;
+}
+table tr th:nth-child(1){
+  width: 10%;
+}
+table tr th:nth-child(2){
+  width: 70%;
+}
+table tr th:nth-child(3){
+  width: 10%;
+}
+table tr th:nth-child(4){
+  width: 10%;
 }
 table tr td{
   font-size: 15px;
   padding: 10px;
+  color : #222;
   border-bottom : 1px solid #eaeaea;
 }
 table tr .report{
+  color : #000;
   text-align: left;
 }
 table tr td button{
+  width: 93px;
   color : #222;
   border : 1px solid #222;
   padding : 3px 10px;
@@ -309,7 +335,6 @@ table tr td button i{
   border : 1px solid #eaeaea;
   border-right : none;
 }
-.search form select option{}
 
 .search form input{
   float : left;
@@ -340,12 +365,10 @@ table tr td button i{
 .page{
   text-align: center;
 }
-.page ul{}
 .page ul li{
   display : inline-block;
   margin : 0px 5px;
 }
-.page ul li a{}
 
 /* footer start */
 footer{
@@ -457,6 +480,9 @@ footer .f_info .copyright{
 @media screen and (max-width : 768px){
   body{
     padding-top: 50px;
+  }
+  .header_gnb_bg{
+    height: 50px;
   }
   .header_wrap{
     height: 50px;
