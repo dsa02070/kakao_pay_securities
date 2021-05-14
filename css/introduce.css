@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/* common style */
+.maintitle{
+    font-size: 36px;
+    margin-bottom: 3%;
+}
+
 /* main_banner start */
 #main_banner{}
 #main_banner .m_bg{
@@ -28,10 +34,6 @@
     padding: 6% 0;
     margin-bottom: 6%;
 }
-.first h3{
-    font-size: 36px;
-    margin-bottom : 30px;
-}
 .first .f_text{
     position : relative;
 }
@@ -39,6 +41,7 @@
     font-size: 16px;
     color : #666;
     display: inline-block;
+    word-break: keep-all;
 }
 .first img{
     position : absolute;
@@ -48,33 +51,81 @@
 
 .second{
     background: #f9f9f9;
+    margin-bottom: 60px;
 }
 .second .inner{
     width: 1140px;
     margin : 0 auto;
     padding: 6% 0;
 }
-.second h3{
-    font-size: 36px;
-    margin-bottom: 3%;
-}
+
 .second p{
     font-size: 24px;
     font-weight: bold;
 }
 
-.third{}
-.third h3{}
-.third .box{}
-.third .box h4{}
-.third .box p{}
+.third{
+    width: 1140px;
+    margin : 0 auto;
+    padding: 30px 0;
+}
 
-.fourth{}
-.fourth h3{}
-.fourth .map_api{}
-.fourth .info{}
-.fourth .info h4{}
-.fourth .info p{}
+.third .box_wrap{
+    display : flex;
+    justify-content: space-around;
+    width: 1100px;
+    margin : 0 auto;
+    padding : 30px 0;
+}
+
+.third .box{
+    width: 180px;
+}
+.third .box h4{
+    width: 180px;
+    height: 180px;
+    margin : 0 auto 30px;
+    line-height: 180px;
+    font-size: 24px;
+    text-align: center;
+    background: rgb(239, 239, 255);
+    border-radius: 100%;
+}
+
+.third .box:nth-child(even) h4{
+    background: #f1f1f1;
+}
+
+.third .box p{
+    font-size: 14px;
+    text-align: center;
+    color : #666;
+    white-space: nowrap;
+}
+
+.fourth{
+    width: 1140px;
+    margin : 0 auto;
+    padding : 60px 0;
+}
+
+.fourth .map_api{
+    height: 300px;
+    width: 600px;
+    background: #f1f1f1;
+    margin-bottom: 60px;
+}
+.fourth .info{
+    margin-bottom: 30px;
+}
+
+.fourth .info h4{
+    font-size: 24px;
+}
+.fourth .info p{
+    font-size: 16px;
+    color : #666;
+}
 
 /* content_wrap end */
 
@@ -95,13 +146,37 @@
         padding: 6% 2%;
         box-sizing: border-box;
     }
+    .third{
+        width: 100%;
+        padding : 4% 2%;
+        box-sizing: border-box;
+    }
+    .fourth{
+        width: 100%;
+        padding : 4% 2%;
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width : 1138px){
+    .third .box_wrap{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 1024px){
+    .third .box_wrap{
+        display : flex;
+        justify-content:space-around;
+        align-items: center;
+        flex-wrap : wrap;
+    }
+    .third .box{
+        width: 180px;
+        height: 280px;
+    }
 }
 
 @media screen and (max-width : 1010px){
-    .first h3{
-        font-size: 36px;
-        margin-bottom : 30px;
-    }
     .first .f_text{
         position : relative;
     }
@@ -114,6 +189,9 @@
         position : static;
         margin-top: 4%;
     }
+    .third .box_wrap{
+        max-width: 650px;
+    }
 }
 
 @media screen and (max-width : 768px){
@@ -124,22 +202,46 @@
         font-size: 22px;
         padding-top: 140px;
     }
-    .first h3{
+    .maintitle{
         font-size: 24px;
-        margin-bottom : 30px;
     }
     .first span{
         font-size: 14px;
         color : #666;
         display: inline-block;
     }
-    .second h3{
-        font-size: 24px;
-        margin-bottom: 2%;
-    }
     .second p{
         font-size: 18px;
         font-weight: bold;
+    }
+    .fourth .info h4{
+        font-size: 18px;
+        margin-bottom: 1%;
+    }
+    .fourth .info p{
+        font-size: 14px;
+        word-break: keep-all;
+    }
+}
+
+@media screen and (max-width : 630px){
+    .fourth .map_api{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width : 570px){
+    .first span{
+        font-size: 12px;
+    }
+    .first img{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width : 400px){
+    .first img{
+        width: 60%;
     }
 }
 
@@ -147,5 +249,7 @@
     #main_banner .m_bg{
         min-width: 280px;
     }
-
+    #content_wrap{
+        min-width: 280px;
+    }
 }

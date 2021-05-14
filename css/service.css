@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/* container start */
+#container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 80px 0 120px;
+}
+#container h4 {
+  font-size: 27px;
+  text-align: center;
+  color: #1e1e1e;
+  margin-bottom: 60px;
+}
+.tab_btn {
+  margin-bottom: 60px;
+}
+.tab_btn ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tab_btn ul li {
+  flex: 1;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+}
+.tab_btn ul li a {
+  display: block;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 22px 10px;
+  color: #1e1e1e;
+}
+.tab_on {
+  background: #ffdf00;
+}
+
+.first_list {
+  width: 1140px;
+  margin: 0 auto;
+}
+.first_list h3 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.first_list > p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 70px;
+  color: #666;
+}
+.text_wrap {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 70px 50px;
+  box-sizing: border-box;
+  background: #f9f9f9;
+}
+.text_wrap li {
+  margin-bottom: 30px;
+}
+
+.text_wrap li p {
+  text-align: left;
+  font-size: 20px;
+  color: #666;
+}
+
+.text_wrap li p strong {
+  font-size: 30px;
+  margin-right: 20px;
+  color: #1e1e1e;
+}
+/* container end */
+
+/* media query */
+@media screen and (max-width: 1160px) {
+  #container {
+    width: 100%;
+  }
+  .first_list {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1016px) {
+  .text_wrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .first_list h3 {
+    font-size: 36px;
+  }
+  .first_list > p {
+    font-size: 14px;
+  }
+  .text_wrap li p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .tab_btn ul li {
+    flex: 220px;
+  }
+  .text_wrap {
+    padding: 6% 3%;
+  }
+  .text_wrap li p {
+    font-size: 14px;
+  }
+  .text_wrap li p strong {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  #container {
+    padding: 80px 0;
+  }
+  .first_list h3 {
+    font-size: 22px;
+    word-break: keep-all;
+  }
+  .first_list > p {
+    font-size: 14px;
+  }
+}
