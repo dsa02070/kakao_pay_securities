@@ -1,7 +1,11 @@
 @charset "utf-8";
 
 /* main_banner start */
-#main_banner{}
+#main_banner{
+    position: relative;
+    overflow : hidden;
+}
+
 #main_banner .m_bg{
     position: relative;
     background-image: url('../img/business/business_banner.jpg');
@@ -10,14 +14,31 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 300px;
+    animation : bannerAni 1.2s ease;
 }
+
+@keyframes bannerAni {
+    0%{filter:brightness(1.4); opacity : 0.4;transform: scale(1.2);}
+    100%{filter:brightness(1); opacity : 1; transform: scale(1);}
+}
+
 #main_banner h2{
+    position : absolute;
     width: 1140px;
     margin : 0 auto;
-    padding-top: 220px;
+    top: 210px;
+    left: 0;
+    right: 0;
     font-size: 34px;
     color : white;
+    animation: tMove 1.2s ease 0.4s both;
 }
+
+@keyframes tMove {
+    0%{transform: translateY(60%); opacity: 0;}
+    100%{transform: translateY(0%); opacity: 1;}
+}
+
 /* main_banner end */
 
 /* content_wrap start */
@@ -171,12 +192,15 @@
 }
 
 @media screen and (max-width : 768px){   
+    #main_banner{
+        height: 200px;
+    }
     #main_banner .m_bg{
         height: 200px;
     }
     #main_banner h2{
         font-size: 22px;
-        padding-top: 140px;
+        top: 150px;
     }
     .first{
         padding : 10% 2%;

@@ -7,7 +7,11 @@
 }
 
 /* main_banner start */
-#main_banner{}
+#main_banner{
+    position : relative;
+    overflow: hidden;
+    height: 300px;
+}
 #main_banner .m_bg{
     position: relative;
     background-image: url('../img/introduce/intro_banner.jpg');
@@ -16,14 +20,31 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 300px;
+    animation : bannerAni 1.2s ease;
 }
+
+@keyframes bannerAni {
+    0%{filter:brightness(1.4); opacity : 0.4;transform: scale(1.2);}
+    100%{filter:brightness(1); opacity : 1; transform: scale(1);}
+}
+
 #main_banner h2{
+    position : absolute;
     width: 1140px;
     margin : 0 auto;
-    padding-top: 220px;
+    top: 210px;
+    left: 0;
+    right: 0;
     font-size: 34px;
     color : white;
+    animation: tMove 1.2s ease 0.4s both;
 }
+
+@keyframes tMove {
+    0%{transform: translateY(60%); opacity: 0;}
+    100%{transform: translateY(0%); opacity: 1;}
+}
+
 /* main_banner end */
 
 /* content_wrap start */
@@ -37,16 +58,32 @@
 .first .f_text{
     position : relative;
 }
+.first h3{
+    opacity: 0;
+    animation-delay: 0.4s;
+}
 .first span{
     font-size: 16px;
     color : #666;
     display: inline-block;
     word-break: keep-all;
+    opacity: 0;
 }
 .first img{
     position : absolute;
     bottom: 0;
     right: 0;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+
+.upMove{
+    animation : upMove 1s ease both;
+}
+
+@keyframes upMove {
+    0%{transform: translateY(40%); opacity: 0;}
+    100%{transform: translateY(0%); opacity: 1;}
 }
 
 .second{
@@ -58,16 +95,24 @@
     margin : 0 auto;
     padding: 6% 0;
 }
+.second h3{
+    opacity: 0;
+}
 
 .second p{
     font-size: 24px;
     font-weight: bold;
+    opacity: 0;
+    animation-delay: 0.4s;
 }
 
 .third{
     width: 1140px;
     margin : 0 auto;
     padding: 30px 0;
+}
+.third h3{
+    opacity: 0;
 }
 
 .third .box_wrap{
@@ -80,7 +125,22 @@
 
 .third .box{
     width: 180px;
+    opacity: 0;
 }
+
+.third .box:nth-child(2){
+    animation-delay: 0.1s;
+}
+.third .box:nth-child(3){
+    animation-delay: 0.3s;
+}
+.third .box:nth-child(4){
+    animation-delay: 0.5s;
+}
+.third .box:nth-child(5){
+    animation-delay: 0.7s;
+}
+
 .third .box h4{
     width: 180px;
     height: 180px;
@@ -108,12 +168,16 @@
     margin : 0 auto;
     padding : 60px 0;
 }
+.fourth h3{
+    opacity: 0;
+}
 
 .fourth .map_api{
     height: 300px;
     width: 600px;
-    background: #f1f1f1;
+    background: url('../img/introduce/map.PNG') center;
     margin-bottom: 60px;
+    opacity: 0;
 }
 .fourth .info{
     margin-bottom: 30px;
@@ -121,10 +185,13 @@
 
 .fourth .info h4{
     font-size: 24px;
+    opacity: 0;
 }
 .fourth .info p{
     font-size: 16px;
     color : #666;
+    opacity: 0;
+    animation-delay: 0.2s;
 }
 
 /* content_wrap end */
@@ -195,12 +262,15 @@
 }
 
 @media screen and (max-width : 768px){
+    #main_banner{
+        height: 200px;
+    }
     #main_banner .m_bg{
         height: 200px;
     }
     #main_banner h2{
         font-size: 22px;
-        padding-top: 140px;
+        top: 150px;
     }
     .maintitle{
         font-size: 24px;
