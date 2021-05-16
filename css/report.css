@@ -36,10 +36,15 @@
   background : #ffdf00;
 }
 
+.table_scroll{
+  overflow: auto;
+}
+
 table{
   width: 100%;
   text-align: center;
   border-top : 2px solid #222;
+  overflow : auto;
 }
 
 table tr th{
@@ -161,7 +166,7 @@ table tr td button i{
 }
 
 @media screen and (max-width : 280px){
-  #container{
-    min-width : 280px;
+  body,html{
+    min-width: 280px;
   }
 }

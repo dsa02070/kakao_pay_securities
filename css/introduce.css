@@ -6,6 +6,16 @@
     margin-bottom: 3%;
 }
 
+/* jquery addClass upMove */
+.upMove{
+    animation : upMove 1s ease both;
+}
+
+@keyframes upMove {
+    0%{transform: translateY(40%); opacity: 0;}
+    100%{transform: translateY(0%); opacity: 1;}
+}
+
 /* main_banner start */
 #main_banner{
     position : relative;
@@ -49,6 +59,7 @@
 
 /* content_wrap start */
 #content_wrap{}
+/* first */
 .first{
     width: 1140px;
     margin : 0 auto;
@@ -76,16 +87,9 @@
     opacity: 0;
     animation-delay: 0.6s;
 }
+/* first end */
 
-.upMove{
-    animation : upMove 1s ease both;
-}
-
-@keyframes upMove {
-    0%{transform: translateY(40%); opacity: 0;}
-    100%{transform: translateY(0%); opacity: 1;}
-}
-
+/* second */
 .second{
     background: #f9f9f9;
     margin-bottom: 60px;
@@ -106,6 +110,7 @@
     animation-delay: 0.4s;
 }
 
+/* third */
 .third{
     width: 1140px;
     margin : 0 auto;
@@ -163,6 +168,7 @@
     white-space: nowrap;
 }
 
+/* fourth */
 .fourth{
     width: 1140px;
     margin : 0 auto;
@@ -193,7 +199,6 @@
     opacity: 0;
     animation-delay: 0.2s;
 }
-
 /* content_wrap end */
 
 /* media query */
@@ -224,6 +229,7 @@
         box-sizing: border-box;
     }
 }
+
 @media screen and (max-width : 1138px){
     .third .box_wrap{
         width: 100%;
@@ -316,10 +322,7 @@
 }
 
 @media screen and (max-width : 280px){
-    #main_banner .m_bg{
-        min-width: 280px;
-    }
-    #content_wrap{
+    body{
         min-width: 280px;
     }
 }

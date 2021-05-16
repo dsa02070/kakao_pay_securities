@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+
+/* jquery addClass */
+.upMove{
+    animation : upMove 1.2s ease both;
+}
+
+@keyframes upMove {
+    0%{transform: translateY(50%); opacity: 0;}
+    100%{transform: translateY(0%); opacity: 1;}
+}
+
 /* main_banner start */
 #main_banner{
     position: relative;
@@ -55,6 +66,7 @@
 .first h3{
     font-size: 36px;
     margin-bottom: 3%;
+    opacity: 0;
 }
 .first span{
     font-size: 16px;
@@ -62,11 +74,15 @@
     color : #666;
     display: inline-block;
     word-break: keep-all;
+    opacity: 0;
+    animation-delay: 0.2s;
 }
 .first img{
     position : absolute;
     bottom: 0;
     right: 0;
+    opacity: 0;
+    animation-delay: 0.6s;
 }
 /* first end */
 
@@ -78,25 +94,32 @@
     min-height: 280px;
     background: #f1f1f1;
 }
+
 .second img{
     width: 50%;
+    opacity: 0;
 }
+
 .second .inner_text{
     padding-left: 4%;
 }
 .second .inner_text h4{
     font-size: 28px;
     margin-bottom: 6%;
+    opacity: 0;
 }
 .second .inner_text p{
     font-size: 16px;
     color : #666;
     line-height: 1.6;
+    opacity: 0;
+    animation-delay: 0.3s;
 }
 /* second end */
 
 /* third start */
 .third{
+    overflow : hidden;
     display: flex;
     align-items: center;
     width: 1140px;
@@ -108,15 +131,21 @@
 .third .inner_text h4{
     font-size: 28px;
     margin-bottom: 6%;
+    opacity: 0;
 }
 .third .inner_text p{
     font-size: 16px;
     color : #666;
     line-height: 1.6;
+    opacity: 0;
+    animation-delay: 0.3s;
 }
 .third img{
     width: 363px;
     margin : 0 auto;
+    z-index: -100;
+    opacity: 0;
+    animation-delay: 0.6s;
 }
 /* third end */
 /* content_wrap end */
@@ -252,6 +281,9 @@
 }
 
 @media screen and (max-width : 280px){
+    body,html{
+        min-width: 280px;
+    }
     #main_banner .m_bg{
         min-width: 280px;
     }
