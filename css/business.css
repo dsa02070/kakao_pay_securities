@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 /* jquery addClass */
 .upMove{
     animation : upMove 1.2s ease both;
@@ -16,7 +15,6 @@
     position: relative;
     overflow : hidden;
 }
-
 #main_banner .m_bg{
     position: relative;
     background-image: url('../img/business/business_banner.jpg');
@@ -53,7 +51,6 @@
 /* main_banner end */
 
 /* content_wrap start */
-#content_wrap{}
 /* first strat */
 .first{
     width: 1140px;
@@ -94,12 +91,10 @@
     min-height: 280px;
     background: #f1f1f1;
 }
-
 .second img{
     width: 50%;
     opacity: 0;
 }
-
 .second .inner_text{
     padding-left: 4%;
 }

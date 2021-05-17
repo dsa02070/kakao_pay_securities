@@ -1,4 +1,5 @@
 $(function () {
+    // scroll event
     $(window).scroll(function () {
         let scTop = $(this).scrollTop();
         let fisrtOffset = $('.first').offset().top;

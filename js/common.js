@@ -6,13 +6,11 @@ $(function () {
         $('.mgnb_btn span:nth-child(2)').toggleClass('mgnb_on2');
     })
 
-    //gnb 영역 mouseenter 시 부드럽게 등장하고 없어지는 코드
+    //gnb 영역 mouseenter 시 메뉴 등장
     $('#gnb>ul>li').mouseenter(function () {
-        $(this).find('.submenu').css({ display: 'block' })
-        $(this).find('.submenu').css('opacity', '1')
+        $(this).find('.submenu').css({ display: 'block' });
     }).mouseleave(function () {
-        $(this).find('.submenu').css({ display: 'none' })
-        $(this).find('.submenu').css('opacity', '0')
+        $(this).find('.submenu').css({ display: 'none' });
     })
 
     // gnb 영역 mouseenter 시 뒷 배경 코드

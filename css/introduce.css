@@ -54,11 +54,9 @@
     0%{transform: translateY(60%); opacity: 0;}
     100%{transform: translateY(0%); opacity: 1;}
 }
-
 /* main_banner end */
 
 /* content_wrap start */
-#content_wrap{}
 /* first */
 .first{
     width: 1140px;
@@ -102,7 +100,6 @@
 .second h3{
     opacity: 0;
 }
-
 .second p{
     font-size: 24px;
     font-weight: bold;
@@ -119,7 +116,6 @@
 .third h3{
     opacity: 0;
 }
-
 .third .box_wrap{
     display : flex;
     justify-content: space-around;
@@ -127,12 +123,10 @@
     margin : 0 auto;
     padding : 30px 0;
 }
-
 .third .box{
     width: 180px;
     opacity: 0;
 }
-
 .third .box:nth-child(2){
     animation-delay: 0.1s;
 }
@@ -145,7 +139,6 @@
 .third .box:nth-child(5){
     animation-delay: 0.7s;
 }
-
 .third .box h4{
     width: 180px;
     height: 180px;
@@ -156,11 +149,9 @@
     background: rgb(239, 239, 255);
     border-radius: 100%;
 }
-
 .third .box:nth-child(even) h4{
     background: #f1f1f1;
 }
-
 .third .box p{
     font-size: 14px;
     text-align: center;
@@ -177,7 +168,6 @@
 .fourth h3{
     opacity: 0;
 }
-
 .fourth .map_api{
     height: 300px;
     width: 600px;
@@ -188,7 +178,6 @@
 .fourth .info{
     margin-bottom: 30px;
 }
-
 .fourth .info h4{
     font-size: 24px;
     opacity: 0;

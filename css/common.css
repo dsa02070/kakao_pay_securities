@@ -12,6 +12,7 @@ input,select,button{
   border : none;
   outline: none;
 }
+table{border-collapse: collapse;}
 
 /* z-index
 .header_gnb_bg : 120;
@@ -45,7 +46,6 @@ body{
     transition : 0.2s;
     z-index: 120;
   }
-  
   .header_wrap{
     position : fixed;
     width: 100%;
@@ -56,11 +56,9 @@ body{
     transition : 0.2s;
     z-index: 500;
   }
-  
   .header_wrap:hover{
     background: #fff;
   }
-  
   header{
     position : relative;
     display : flex;
@@ -68,28 +66,24 @@ body{
     width: 1140px;
     margin : 0 auto;
   }
-  
+  /* logo */
   #logo{
     padding-top: 23px;
   }
   #logo h1{
     font-size: 0;
   }
-  
   #gnb > ul{
     padding-right: 24px;
   }
-  
   #gnb > ul:after{
     content : '';
     clear : both;
     display : block;
   }
-  
   #gnb:hover ul + div{
     height: 420px;
   }
-  
   #gnb > ul > li{
     position : relative;
     float : left;
@@ -97,11 +91,9 @@ body{
     height: 73px;
     line-height: 73px;
   }
-  
   #gnb > ul > li:first-child{
     margin-left: 0;
   }
-  
   #gnb > ul > li > a{
     display: inline-block;
     position : relative;
@@ -112,7 +104,6 @@ body{
     font-weight : bold;
     color : #1e1e1e;
   }
-  
   #gnb > ul > li:after{
     content : '';
     position : absolute;
@@ -123,24 +114,19 @@ body{
     background : #666;
     transition : 0.3s;
   }
-  
   #gnb > ul > li:hover:after{
     left: 0%;
     width: 100%;
   }
-  
   #gnb .submenu{
     display : none;
-    opacity: 0;
     position : absolute;
     width: 100%;
     padding-top: 10px;
     padding-left: 10px;
     text-align: left;
     font-weight: bold;
-    transition : 0.2s;
   }
-  
   #gnb .submenu li{
     line-height: 39px;
   }
@@ -149,7 +135,6 @@ body{
     color : #666;
     white-space: nowrap;
   }
-  
   #gnb .submenu li a:hover{
     color : #1e1e1e;
   }
@@ -177,19 +162,15 @@ body{
     z-index: 100;
     cursor : pointer
   }
-  
   .mgnb_btn span:first-child{
     top: 60%;
   }
-  
   .mgnb_on1{
     transform: translateY(-50%) rotate(45deg);
   }
-  
   .mgnb_on2{
     transform: translateY(400%) rotate(-45deg);
   }
-  
   .mgnb{
     overflow : auto;
     position : fixed;
@@ -201,11 +182,9 @@ body{
     text-align: left;
     background: #fff;
   }
-  
   .mgnb_on{
     top: 73px;
   }
-  
   .mgnb > ul{
     margin-top: 10px;
     margin-left: 60px;
@@ -220,7 +199,6 @@ body{
     margin-bottom: 5px;
     color : #1e1e1e;
   }
-  
   .mgnb > ul > li > .submenu > li > a{
     display: inline-block;
     font-size: 16px;
@@ -229,14 +207,13 @@ body{
     margin-bottom: 5px;
     color : #666;
   }
-  
   .mgnb > ul > li > .submenu > li > a:hover{
     text-decoration: underline;
   }
   /* header end */
 
   /* footer start */
-footer{
+  footer{
     padding : 45px 0;
     background: #1e1e1e;
   }
@@ -247,13 +224,11 @@ footer{
   footer .inner .f_top{
     margin-bottom: 112px;
   }
-  
   footer .inner .f_top ul li{
     position : relative;
     display: inline-block;
     padding : 0 14px;
   }
-  
   footer .inner .f_top ul li:after{
     content : '';
     position : absolute;
@@ -267,23 +242,19 @@ footer{
   footer .inner .f_top ul li:first-child:after{
     display: none;
   }
-  
   footer .inner .f_top ul li:first-child{
     padding-left: 0;
   }
-  
   footer .inner .f_top ul li a{
     font-size: 14px;
     color : #666;
   }
-  
   footer .inner .f_top ul li a:hover{
     color : #888;
   }
   footer .f_logo{
     margin-bottom: 20px;
   }
-  
   footer .f_info{
     display: block;
     font-size : 14px;
@@ -295,7 +266,6 @@ footer{
     padding-right : 14px;
     margin-right : 7px;
   }
-  
   footer .f_info address:after{
     content : '';
     display : block;
@@ -307,7 +277,6 @@ footer{
     height: 90%;
     background: #666;
   }
-  
   footer .f_info .tel{
     display: inline-block;
     vertical-align: top;
@@ -317,6 +286,7 @@ footer{
   }
   /* footer end */
 
+  /* media query */
   @media screen and (max-width : 1160px){
     header{
       width : 100%;
@@ -390,6 +360,7 @@ footer{
       text-align: left;
     }
   }
+
   @media screen and (max-width : 330px){
     #logo{
       transform: scale(0.8);
@@ -397,6 +368,7 @@ footer{
       padding-left: 3px;
     }
   }
+  
   @media screen and (max-width : 280px){
     .header_wrap{
       min-width: 280px;

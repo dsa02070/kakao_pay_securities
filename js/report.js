@@ -1,5 +1,5 @@
 $(function () {
-    // report.html tab_btn
+    // 영업보고서, 감사보고서 tab_btn
     $('table:nth-of-type(2)').css('display', 'none')
     $('.tab_first').click(function () {
         $(this).addClass('tab_on');
@@ -7,8 +7,6 @@ $(function () {
         $('table:nth-of-type(1)').css('display', 'block')
         $('table:nth-of-type(2)').css('display', 'none')
     })
-
-    // 테이블 탭버튼
     $('.tab_second').click(function () {
         $(this).addClass('tab_on');
         $('.tab_first').removeClass('tab_on');
