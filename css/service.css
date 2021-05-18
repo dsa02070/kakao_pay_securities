@@ -501,7 +501,7 @@ p.c_sub:before{
 
 @media screen and (max-width: 535px) {
   #container{
-    padding-top: 40px;
+    padding: 40px 0px 40px;
   }
   .list_wrap h3 {
     font-size: 24px;
@@ -516,7 +516,10 @@ p.c_sub:before{
     font-size: 14px;
   }
   .civil_process{
-    padding : 0px 0 50px;
+    padding : 30px 0;
+  }
+  .product{
+    margin-top: 30px;
   }
   .guide p{
     font-size: 14px;
