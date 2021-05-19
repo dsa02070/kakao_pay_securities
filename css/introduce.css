@@ -62,7 +62,7 @@
     width: 1140px;
     margin : 0 auto;
     padding: 6% 0;
-    margin-bottom: 6%;
+    margin-bottom: 2%;
 }
 .first .f_text{
     position : relative;
@@ -197,7 +197,7 @@
         padding-left: 23px;
         box-sizing: border-box;
     }
-    .first{
+    #content_wrap > div{
         width: 100%;
         padding: 4% 2%;
         box-sizing: border-box;
@@ -205,16 +205,6 @@
     .second .inner{
         width: 100%;
         padding: 6% 2%;
-        box-sizing: border-box;
-    }
-    .third{
-        width: 100%;
-        padding : 4% 2%;
-        box-sizing: border-box;
-    }
-    .fourth{
-        width: 100%;
-        padding : 4% 2%;
         box-sizing: border-box;
     }
 }
@@ -227,9 +217,6 @@
 
 @media screen and (max-width : 1024px){
     .third .box_wrap{
-        display : flex;
-        justify-content:space-around;
-        align-items: center;
         flex-wrap : wrap;
     }
     .third .box{
@@ -244,8 +231,6 @@
     }
     .first span{
         font-size: 16px;
-        color : #666;
-        display: inline-block;
     }
     .first img{
         position : static;
@@ -272,12 +257,9 @@
     }
     .first span{
         font-size: 14px;
-        color : #666;
-        display: inline-block;
     }
     .second p{
         font-size: 18px;
-        font-weight: bold;
     }
     .fourth .info h4{
         font-size: 18px;
@@ -307,6 +289,13 @@
 @media screen and (max-width : 400px){
     .first img{
         width: 60%;
+    }
+    .maintitle{
+        font-size: 20px;
+    }
+    .second p{
+        font-size: 14px;
+        font-weight: bold;
     }
 }
 

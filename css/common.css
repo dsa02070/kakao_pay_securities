@@ -167,12 +167,12 @@ body{
     top: 25px;
   }
   .mgnb_btn span.mgnb_on1{
-    top: 15px;
-    transform: rotate(45deg);
+    top: 20px;
+    transform: rotate(40deg);
   }
   .mgnb_btn span.mgnb_on2{
-    top: 15px;
-    transform: rotate(-45deg);
+    top: 20px;
+    transform: rotate(-40deg);
   }
   .mgnb{
     overflow : auto;
@@ -325,7 +325,7 @@ body{
       padding-top: 13px;
     }
     .mgnb_btn{
-      top: 12px;
+      top: 8px;
     }
     .mgnb{
       top: 51px;
