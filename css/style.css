@@ -18,12 +18,20 @@
   font-weight: bold;
   color : #000;
   margin-bottom: 2%;
-  animation : mtextAni 1.2s ease;
+  
 }
 .mtext .subtitle{
   font-size: 1.5vw;
   color: #000;
   margin-bottom: 2%;
+  
+}
+
+.mtextAni1{
+  animation : mtextAni 1.2s ease;
+}
+
+.mtextAni2{
   animation : mtextAni 1.2s ease 0.2s both;
 }
 
@@ -40,10 +48,17 @@
   opacity: 0.1;
   transform : translateX(-15%);
   transition : 0.3s;
-  animation : text1Ani 2s ease 0.5s both;
+  
 }
 .mtext .text2{
   transform : translateX(-25%);
+}
+
+.textAni1{
+  animation : text1Ani 2s ease 0.5s both;
+}
+
+.textAni2{
   animation : text2Ani 2s ease 0.8s both;
 }
 
@@ -60,6 +75,9 @@
 #main_banner img{
   width: 100%;
   height: auto;
+}
+
+.bannerAni{
   animation : bannerAni 1s ease;
 }
 

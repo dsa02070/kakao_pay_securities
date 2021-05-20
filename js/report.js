@@ -3,15 +3,15 @@ $(function () {
     $('table:nth-of-type(2)').css('display', 'none')
     $('.tab_first').click(function () {
         $(this).addClass('tab_on');
-        $('.tab_second').removeClass('tab_on')
-        $('table:nth-of-type(1)').css('display', 'block')
-        $('table:nth-of-type(2)').css('display', 'none')
+        $('.tab_second').removeClass('tab_on');
+        $('table:nth-of-type(1)').css('display', 'block');
+        $('table:nth-of-type(2)').css('display', 'none');
     })
     $('.tab_second').click(function () {
         $(this).addClass('tab_on');
         $('.tab_first').removeClass('tab_on');
-        $('table:nth-of-type(2)').css('display', 'block')
-        $('table:nth-of-type(1)').css('display', 'none')
+        $('table:nth-of-type(2)').css('display', 'block');
+        $('table:nth-of-type(1)').css('display', 'none');
     })
 
     // input placeholder 대체 코드

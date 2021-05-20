@@ -46,7 +46,7 @@ table{
   overflow : auto;
 }
 table tr th{
-  padding: 10px;
+  padding: 10px 0;
   border-bottom : 1px solid #eaeaea;
   white-space: nowrap;
 }
@@ -64,7 +64,7 @@ table tr th:nth-child(4){
 }
 table tr td{
   font-size: 15px;
-  padding: 10px;
+  padding: 10px 15px;
   color : #222;
   border-bottom : 1px solid #eaeaea;
 }

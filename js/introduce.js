@@ -1,4 +1,8 @@
 $(function () {
+    // 초기 애니메이션 실행
+    $('#main_banner .m_bg').addClass('bannerAni');
+    $('#main_banner h2').addClass('tMove');
+
     // scroll event
     $(window).scroll(function () {
         let scTop = $(this).scrollTop();
