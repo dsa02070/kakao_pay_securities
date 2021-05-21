@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* main_banner start */
+/* main_banner area start */
 #main_banner{
   overflow: hidden;
   position : relative;
@@ -27,14 +27,13 @@
   
 }
 
+/* main_banner text jquery addClass animation */
 .mtextAni1{
   animation : mtextAni 1.2s ease;
 }
-
 .mtextAni2{
   animation : mtextAni 1.2s ease 0.2s both;
 }
-
 @keyframes mtextAni{
   0%{opacity: 0; transform: translateY(70%);}
   100%{opacity: 1; transform: translateY(0%);}
@@ -46,27 +45,20 @@
   line-height: 0.8;
   color: #000;
   opacity: 0.1;
-  transform : translateX(-15%);
   transition : 0.3s;
-  
-}
-.mtext .text2{
-  transform : translateX(-25%);
 }
 
+/* KAKAOPAY, SECURITIES text animation */
 .textAni1{
   animation : text1Ani 2s ease 0.5s both;
 }
-
 .textAni2{
   animation : text2Ani 2s ease 0.8s both;
 }
-
 @keyframes text1Ani{
   0%{opacity: 0; transform: translateX(-50%);}
   100%{opacity: 0.1; transform: translateX(-15%);}
 }
-
 @keyframes text2Ani{
   0%{opacity: 0; transform: translateX(-50%);}
   100%{opacity: 0.1; transform: translateX(-25%);}
@@ -76,7 +68,7 @@
   width: 100%;
   height: auto;
 }
-
+/* main_banner img animation */
 .bannerAni{
   animation : bannerAni 1s ease;
 }
@@ -85,9 +77,9 @@
   0%{filter:brightness(1.2); transform: scale(1.2);}
   100%{filter:brightness(1); transform: scale(1);}
 }
-/* main_banner end */
+/* main_banner area end */
 
-/* section start */
+/* section area start */
 #first{
   background-image : url('../img/section2_img.png');
   background-size: 33% auto;
@@ -99,15 +91,16 @@
   opacity: 0;
 }
 
+/* #first img animation */
 .firstAni_on{
   animation : firstAni 1.5s ease both
 }
-
 @keyframes firstAni {
   0%{opacity: 0; background-position: 100% bottom;}
   100%{opacity: 1; background-position: 90% bottom;}
 }
 
+/* #first text */
 #first h3{
   font-size: 3.8vw;
   line-height: 1.4;
@@ -125,6 +118,8 @@
   animation-delay: 0.6s;
   opacity: 0;
 }
+
+/* btn style */
 .btn{
   display : inline-block;
   padding: 16px 28px;
@@ -138,13 +133,17 @@
   animation-delay: 1.9s;
   opacity: 0;
 }
-.first_on{
-  animation : upMove 1.5s ease both;
-}
 .btn:hover{
   background: #222;
   color : #ffdf00;
 }
+
+/* #first text jquery addClass animation */
+.first_on{
+  animation : upMove 1.5s ease both;
+}
+
+/* second area start */
 .second_wrap{
   overflow : hidden;
 }
@@ -155,10 +154,11 @@
   background-size : cover;
   opacity: 0;
 }
+
+/* second img jquery addClass animation */
 .second_bg_on{
   animation : secondAni 1s ease both;
 }
-
 @keyframes secondAni {
   0%{filter:brightness(1.4); transform: scale(1.2);opacity: 0;}
   100%{filter:brightness(1); transform: scale(1.01);opacity: 1;}
@@ -180,10 +180,11 @@
   animation-delay: 1.2s;
   opacity: 0;
 }
+
+/* second text, btn addClass animation */
 .second_on{
   animation : upMove 1s ease both;
 }
-
 @keyframes upMove {
   0%{opacity: 0; transform: translateY(50%);}
   100%{opacity: 1; transform: translateY(0%);}
@@ -193,9 +194,9 @@
   width: 100%;
   height: auto;
 }
-/* section end */
+/* section area end */
 
-/* media query */
+/* media query area */
 @media screen and (max-width : 1024px){
   #main_banner .mtext{
     position : relative;

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* container start */
+/* container area start */
 #container{
   width: 1140px;
   margin : 0 auto;
@@ -12,6 +12,7 @@
   color : #1e1e1e;
   margin-bottom: 60px;
 }
+/* tab_btn */
 .tab_btn{
   margin-bottom: 60px;
 }
@@ -43,7 +44,6 @@ table{
   width: 100%;
   text-align: center;
   border-top : 2px solid #222;
-  overflow : auto;
 }
 table tr th{
   padding: 10px 0;
@@ -65,18 +65,18 @@ table tr th:nth-child(4){
 table tr td{
   font-size: 15px;
   padding: 10px 15px;
-  color : #222;
   border-bottom : 1px solid #eaeaea;
+  color : #222;
 }
 table tr .report{
-  color : #000;
   text-align: left;
+  color : #000;
 }
 table tr td button{
   width: 93px;
+  padding : 3px 10px;
   color : #222;
   border : 1px solid #222;
-  padding : 3px 10px;
   cursor : pointer;
 }
 table tr td button i{
@@ -88,6 +88,7 @@ table tr td button i{
 }
 /* table end */
 
+/* search */
 .search{
   width: 506px;
   margin : 40px auto;
@@ -110,8 +111,8 @@ table tr td button i{
   width: 380px;
   height: 46px;
   font-size: 15px;
-  color : #222;
   padding-left: 10px;
+  color : #222;
   background-color: #fbfbfb;
   border : 1px solid #eaeaea;
   border-right: none;
@@ -137,7 +138,7 @@ table tr td button i{
   display : inline-block;
   margin : 0px 5px;
 }
-/* container end */
+/* container area end */
 
 /* media query */
 @media screen and (max-width : 1160px){

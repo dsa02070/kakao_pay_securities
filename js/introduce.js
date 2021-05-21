@@ -1,31 +1,21 @@
 $(function () {
+
     // 초기 애니메이션 실행
     $('#main_banner .m_bg').addClass('bannerAni');
-    $('#main_banner h2').addClass('tMove');
+    setTimeout(function () {
+        $('#main_banner h2').addClass('tMove');
+    }, 500)
+    $('.first h3, .first .f_text span, .first img').addClass('upMove');
 
     // scroll event
+    const addTop = 450;
     $(window).scroll(function () {
-        let scTop = $(this).scrollTop();
-        let firstOffset = $('.first').offset().top;
-        let secondOffset = $('.second').offset().top;
-        let thirdOffset = $('.third').offset().top;
-        let fourthOffset = $('.fourth').offset().top;
-        let infoOffset = $('.info').offset().top;
-
-        if (firstOffset - 374 <= scTop) {
-            $('.first span, .first h3, .first img').addClass('upMove');
-        }
-        if (secondOffset - 600 <= scTop) {
-            $('.second h3, .second p').addClass('upMove')
-        }
-        if (thirdOffset - 525 <= scTop) {
-            $('.third h3, .box').addClass('upMove');
-        }
-        if (fourthOffset - 500 <= scTop) {
-            $('.fourth h3, .map_api').addClass('upMove');
-        }
-        if (infoOffset - 600 <= scTop) {
-            $('.info h4, .info p').addClass('upMove');
-        }
+        let thisScrollTop = $(this).scrollTop();
+        $('.second, .third, .fourth').each(function () {
+            let thisOffset = $(this).offset();
+            if (thisOffset.top <= thisScrollTop + addTop) {
+                $('*', this).addClass('upMove');
+            }
+        })
     })
 })

@@ -234,7 +234,6 @@ p.c_sub:before{
   width: 100%;
   text-align: center;
   border-top : 2px solid #222;
-  overflow : auto;
 }
 .fourth_list table tr th{
   padding: 10px;
@@ -380,20 +379,15 @@ p.c_sub:before{
   .inner {
     width: 100%;
   }
-  .third_list{
-    padding : 0 10px;
-    box-sizing: border-box;
+  #container{
+    padding: 40px 0;
   }
-  .fifth_list{
-    padding : 0 10px;
-    box-sizing: border-box;
+  .text_wrap {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 1016px) {
-  .text_wrap {
-    width: 100%;
-  }
   .fifth_list table tr th{
     font-size: 16px;
     height: 60px;
@@ -426,7 +420,7 @@ p.c_sub:before{
     box-sizing: border-box;
   }
   .list_wrap .inner{
-    padding : 0 10px;
+    padding : 0 20px;
     box-sizing: border-box;
   }
   .list_wrap ul li h5{
@@ -500,9 +494,6 @@ p.c_sub:before{
 }
 
 @media screen and (max-width: 535px) {
-  #container{
-    padding: 40px 0px 40px;
-  }
   .list_wrap h3 {
     font-size: 24px;
     margin-bottom: 30px;
@@ -533,9 +524,17 @@ p.c_sub:before{
   }
 }
 
+@media screen and (max-width : 497px){
+  .tab_btn ul li {
+    flex: 33%;
+  }
+  .tab_btn ul li a{
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 455px){
   .tab_btn ul li a{
-    font-size: 14px;
     padding : 12px 10px;
   }
 }
@@ -549,9 +548,18 @@ p.c_sub:before{
   }
 }
 
-@media screen and (max-width: 280px){
+@media screen and (max-width: 314px){
+  .search form select{
+    width: 60px;
+  }
+  .fourth_list .search form input{
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 320px){
   body,html{
-    min-width: 280px;
+    min-width: 320px;
   }
   table{
     width: 90%;  

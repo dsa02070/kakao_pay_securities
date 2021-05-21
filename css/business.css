@@ -1,16 +1,22 @@
 @charset "utf-8";
 
-/* jquery addClass */
+/* common style */
+.inner{
+    width: 1140px;
+    margin : 0 auto;
+    padding: 6% 0;
+}
+
+/* jquery addClass upMove */
 .upMove{
     animation : upMove 1.2s ease both;
 }
-
 @keyframes upMove {
     0%{transform: translateY(50%); opacity: 0;}
     100%{transform: translateY(0%); opacity: 1;}
 }
 
-/* main_banner start */
+/* main_banner area start */
 #main_banner{
     position: relative;
     overflow : hidden;
@@ -28,7 +34,6 @@
 .bannerAni{
     animation : bannerAni 1.2s ease;
 }
-
 @keyframes bannerAni {
     0%{filter:brightness(1.4); opacity : 0.4;transform: scale(1.2);}
     100%{filter:brightness(1); opacity : 1; transform: scale(1);}
@@ -43,26 +48,21 @@
     right: 0;
     font-size: 34px;
     color : white;
+    opacity: 0;
 }
 
 .tMove{
     animation: tMove 1.2s ease 0.4s both;
 }
-
 @keyframes tMove {
     0%{transform: translateY(60%); opacity: 0;}
     100%{transform: translateY(0%); opacity: 1;}
 }
 
-/* main_banner end */
+/* main_banner area end */
 
-/* content_wrap start */
+/* content_wrap area start */
 /* first strat */
-.first{
-    width: 1140px;
-    margin : 0 auto;
-    padding: 6% 0;
-}
 .first .f_text{
     position : relative;
 }
@@ -73,7 +73,7 @@
 }
 .first span{
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 26px;
     color : #666;
     display: inline-block;
     word-break: keep-all;
@@ -102,17 +102,17 @@
     opacity: 0;
 }
 .second .inner_text{
-    padding-left: 4%;
+    padding-left: 30px;
 }
 .second .inner_text h4{
     font-size: 28px;
-    margin-bottom: 6%;
+    margin-bottom: 30px;
     opacity: 0;
 }
 .second .inner_text p{
     font-size: 16px;
+    line-height: 26px;
     color : #666;
-    line-height: 1.6;
     opacity: 0;
     animation-delay: 0.3s;
 }
@@ -123,21 +123,21 @@
     overflow : hidden;
     display: flex;
     align-items: center;
-    width: 1140px;
-    margin : 5% auto 0;
+    margin-top : 40px;
+    padding: 0;
 }
 .third .inner_text{
     width: 50%;
 }
 .third .inner_text h4{
     font-size: 28px;
-    margin-bottom: 6%;
+    margin-bottom: 30px;
     opacity: 0;
 }
 .third .inner_text p{
     font-size: 16px;
+    line-height: 26px;
     color : #666;
-    line-height: 1.6;
     opacity: 0;
     animation-delay: 0.3s;
 }
@@ -149,7 +149,7 @@
     animation-delay: 0.6s;
 }
 /* third end */
-/* content_wrap end */
+/* content_wrap area end */
 
 /* media query */
 @media screen and (max-width : 1160px){
@@ -158,18 +158,14 @@
         padding-left: 23px;
         box-sizing: border-box;
     }
-    #content_wrap > div{
+    .second{
         width: 100%;
+        padding-right: 30px;
         box-sizing: border-box;
     }
-    .first{
-        padding: 6% 2%;
-    }
-    .third{
-        padding: 0% 2%;
-    }
-    .second .inner_text{
-        padding-left: 2%;
+    .inner{
+        width: 100%;
+        padding: 4% 30px;
         box-sizing: border-box;
     }
     .third img{
@@ -203,14 +199,23 @@
     .second img{
         width: 100%;
         text-align: center;
-        margin-bottom: 3%;
+        margin-bottom: 30px;
+    }
+    .second .inner_text{
+        padding-left: 0;
+        padding-right: 30px;
     }
     .second .inner_text h4{
         font-size: 28px;
-        margin-bottom: 3%;
+        padding-left: 30px;
+        margin-bottom: 20px;
+    }
+    .second p{
+        padding-left: 30px;
     }
     .third{
         display: block;
+        padding : 0 30px;
     }
     .third img{
         display: block;
@@ -232,9 +237,6 @@
         font-size: 22px;
         top: 150px;
     }
-    .first{
-        padding : 10% 2%;
-    }
     .first h3{
         font-size: 24px;
     }
@@ -253,22 +255,16 @@
         width: 40%;
     }
     .second .inner_text h4{
-        font-size: 22px;
-        margin-bottom: 6%;
+        font-size: 20px;
     }
     .second .inner_text p{
         font-size: 14px;
-        color : #666;
-        line-height: 1.6;
     }
     .third .inner_text h4{
-        font-size: 22px;
-        margin-bottom: 6%;
+        font-size: 20px;
     }
     .third .inner_text p{
         font-size: 14px;
-        color : #666;
-        line-height: 1.6;
     }
 }
 

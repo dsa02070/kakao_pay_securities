@@ -1,5 +1,5 @@
 $(function () {
-    // 처음 메인 애니메이션
+    // 초기 메인 애니메이션
     $('.mtext h2').addClass('mtextAni1');
     $('.mtext > .subtitle').addClass('mtextAni2');
     $('.text1').addClass('textAni1');

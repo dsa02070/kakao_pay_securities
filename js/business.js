@@ -1,25 +1,25 @@
 $(function () {
     // 초기 애니메이션 실행
     $('#main_banner .m_bg').addClass('bannerAni');
-    $('#main_banner h2').addClass('tMove');
+    setTimeout(function () {
+        $('#main_banner h2').addClass('tMove');
+    }, 500)
+    $('.first h3, .first .f_text span, .first img').addClass('upMove');
 
     // scroll event
+    const addTop = 450;
     $(window).scroll(function () {
-        let scTop = $(this).scrollTop();
-        let fisrtOffset = $('.first').offset().top;
-        let secondOffset = $('.second').offset().top;
-        let thirdOffset = $('.third').offset().top;
-
-        if (fisrtOffset - 374 <= scTop) {
-            $('.first h3, .first span, .first img').addClass('upMove');
-        }
-        if (secondOffset - 500 <= scTop) {
-            $('.second h4, .second p').addClass('upMove');
-            $('.second img').animate({ opacity: '1' }, 1200, 'swing')
-        }
-
-        if (thirdOffset - 500 <= scTop) {
-            $('.third h4, .third p, .third img').addClass('upMove');
+        let thisScrollTop = $(this).scrollTop();
+        $('.second, .third').each(function () {
+            let thisOffset = $(this).offset();
+            if (thisOffset.top < thisScrollTop + addTop) {
+                $('div>*', this).addClass('upMove');
+                $('.second img').animate({ opacity: '1' }, 1200, 'swing');
+            }
+        })
+        let thirdHeight = $('.third').offset().top;
+        if (thirdHeight < thisScrollTop + addTop) {
+            $('img[alt="third img"]').addClass('upMove');
         }
     })
 })

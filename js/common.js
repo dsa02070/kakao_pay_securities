@@ -6,27 +6,21 @@ $(function () {
         $('span:nth-child(2)', this).toggleClass('mgnb_on2');
     })
 
-    //gnb 영역 mouseenter 시 메뉴 등장
-    $('#gnb>ul>li').mouseenter(function () {
+    let gnbElem = $('#gnb > ul > li')
+    // submenu hover event
+    gnbElem.mouseenter(function () {
         $(this).find('.submenu').css({ display: 'block' });
+        $(this).find('.submenu').stop().animate({ opacity: '1' }, 200)
     }).mouseleave(function () {
-        $(this).find('.submenu').css({ display: 'none' });
+        $(this).find('.submenu').css({ display: 'none', opacity: '0' });
     })
 
-    // gnb 영역 mouseenter 시 뒷 배경 코드
-    $('#gnb>ul>li:nth-of-type(1)').mouseenter(function () {
-        $('.header_gnb_bg').css({ height: '60px' })
-    })
-    $('#gnb>ul>li:nth-of-type(2)').mouseenter(function () {
-        $('.header_gnb_bg').css({ height: '100px' })
-    })
-    $('#gnb>ul>li:nth-of-type(3)').mouseenter(function () {
-        $('.header_gnb_bg').css({ height: '100px' })
-    })
-    $('#gnb>ul>li:nth-of-type(4)').mouseenter(function () {
-        $('.header_gnb_bg').css({ height: '420px' })
-    })
-    $('#gnb>ul>li').mouseleave(function () {
-        $('.header_gnb_bg').css({ height: '0px' })
+    // submenu area background
+    let header_bg = $('.header_gnb_bg')
+    gnbElem.mouseenter(function () {
+        let subHeight = $(this).find('.submenu').outerHeight()
+        header_bg.css('height', subHeight + 10);
+    }).mouseleave(function () {
+        header_bg.css('height', '0')
     })
 })
