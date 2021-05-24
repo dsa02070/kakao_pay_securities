@@ -177,37 +177,37 @@ header{
   overflow : auto;
   position : fixed;
   display: none;;
-  top: 73px;
+  top: 74px;
   left: 0%;
   right: 0%;
   bottom: 0px;
   text-align: left;
   background: #fff;
 }
-/* jquery addClass */
-.mgnb_on{
-  top: 73px;
-}
 .mgnb > ul{
-  margin-top: 10px;
+  margin-top: 30px;
   margin-left: 60px;
 }
 .mgnb > ul > li{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .mgnb > ul > li > a{
   display: inline-block;
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   color : #1e1e1e;
 }
+
+.mgnb > ul > li > .submenu > li{
+  line-height: 34px;
+}
+
 .mgnb > ul > li > .submenu > li > a{
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
-  margin-left: 10px;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   color : #666;
 }
 .mgnb > ul > li > .submenu > li > a:hover{

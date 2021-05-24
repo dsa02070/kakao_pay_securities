@@ -30,12 +30,15 @@ $(function () {
     })
 
     // 소비자보호프로세스 조직도 이미지 속성 변경
-    let wWidth = $(window).width()
-    if (wWidth <= 882) {
-        $('.customer img').attr('src', '../img/service/customer_mobile.jpg')
-    } else {
-        $('.customer img').attr('src', '../img/service/customer.jpg')
-    }
+    $(window).resize(function () {
+        let wWidth = $(window).width()
+        if (wWidth <= 882) {
+            $('.customer img').attr('src', '../img/service/customer_mobile.jpg')
+        } else {
+            $('.customer img').attr('src', '../img/service/customer.jpg')
+        }
+    })
+
 
     // input placeholder 대체 코드
     $('.input_search').val('검색어를 입력하세요').css('color', '#ccc').one('focus', function () {
