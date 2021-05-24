@@ -96,6 +96,7 @@ p.c_sub:before{
 }
 .first_list > p {
   font-size: 20px;
+  line-height: 24px;
   text-align: center;
   margin-bottom: 70px;
   color: #666;
@@ -113,6 +114,7 @@ p.c_sub:before{
 .text_wrap li p {
   text-align: left;
   font-size: 20px;
+  line-height: 24px;
   color: #666;
 }
 .text_wrap li p strong {
@@ -136,6 +138,9 @@ p.c_sub:before{
 .civil_process ul li:first-child h5{
   background: rgb(223, 232, 253);
 }
+p.c_sub{
+  line-height: 24px;
+}
 .product{
   padding : 100px 0 0px;
 }
@@ -154,7 +159,7 @@ p.c_sub:before{
 /* guide */
 .guide p{
   color : #666;
-  line-height: 1.6;
+  line-height: 24px;
 }
 
 /* method */
@@ -351,9 +356,10 @@ p.c_sub:before{
   white-space: nowrap;
 }
 .fifth_list table tr td{
-  min-width: 100px;
-  padding-left: 40px;
+  min-width: 120px;
   font-size: 18px;
+  line-height: 20px;
+  padding-left: 40px;
 }
 .fifth_list table tr td a{
   font-size: 14px;
