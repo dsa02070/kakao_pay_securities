@@ -164,7 +164,6 @@
 .fourth .map_api{
     height: 300px;
     width: 600px;
-    background: url('../img/introduce/map.PNG') center;
     margin-bottom: 60px;
     opacity: 0;
 }
