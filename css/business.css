@@ -73,7 +73,7 @@
 }
 .first span{
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
     color : #666;
     display: inline-block;
     word-break: keep-all;
@@ -111,7 +111,7 @@
 }
 .second .inner_text p{
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
     color : #666;
     opacity: 0;
     animation-delay: 0.3s;
