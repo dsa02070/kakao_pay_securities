@@ -17,14 +17,13 @@
   font-size: 4.2vw;
   font-weight: bold;
   color : #000;
-  margin-bottom: 2%;
+  margin-bottom: 16px;
   
 }
 .mtext .subtitle{
   font-size: 1.5vw;
   color: #000;
-  margin-bottom: 2%;
-  
+  margin-bottom: 16px;
 }
 
 /* main_banner text jquery addClass animation */
@@ -43,9 +42,6 @@
   font-size: 9.6vw;
   font-weight: bold;
   line-height: 0.8;
-  color: #000;
-  opacity: 0.1;
-  transition : 0.3s;
 }
 
 /* KAKAOPAY, SECURITIES text animation */
@@ -85,10 +81,8 @@
   background-size: 33% auto;
   background-repeat: no-repeat;
   background-position: 90% bottom;
-  padding : 10% 0;
-  padding-left : 21%;
+  padding : 10% 0 10% 20%;
   box-sizing: border-box;
-  opacity: 0;
 }
 
 /* #first img animation */
@@ -112,7 +106,7 @@
 #first p{
   font-size: 1.4vw;
   font-weight: bold;
-  line-height: 1.4;
+  line-height: 1.6;
   margin-bottom: 30px;
   color : #666;
   animation-delay: 0.6s;
@@ -131,7 +125,6 @@
   background: #ffdf00;
   transition : 0.3s;
   animation-delay: 1.9s;
-  opacity: 0;
 }
 .btn:hover{
   background: #222;
@@ -174,11 +167,9 @@
   margin-bottom: 3vw;
   color : white;
   animation-delay: 0.8s;
-  opacity: 0;
 }
 #second a{
   animation-delay: 1.2s;
-  opacity: 0;
 }
 
 /* second text, btn addClass animation */
@@ -272,8 +263,7 @@
     font-size: 3vw;
   }
   #first{
-    padding : 5% 0 10%;
-    padding-left : 11%;
+    padding : 5% 0 10% 11%;
     background-size: 23% auto;
   }
   #first h3{
@@ -298,10 +288,7 @@
   }
 }
 @media screen and (max-width : 280px){
-  #main_banner{
-    min-width : 280px;
-  }
-  .container{
-    min-width : 280px;
+  html,body{
+    min-width: 280px;
   }
 }
