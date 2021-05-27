@@ -83,6 +83,7 @@
   background-position: 90% bottom;
   padding : 10% 0 10% 20%;
   box-sizing: border-box;
+  opacity: 0;
 }
 
 /* #first img animation */
@@ -125,6 +126,7 @@
   background: #ffdf00;
   transition : 0.3s;
   animation-delay: 1.9s;
+  opacity: 0;
 }
 .btn:hover{
   background: #222;
