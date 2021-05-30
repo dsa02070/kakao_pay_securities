@@ -168,6 +168,9 @@
         padding: 4% 30px;
         box-sizing: border-box;
     }
+    .third.inner{
+        padding: 0 30px;
+    }
     .third img{
         margin : 0;
     }
